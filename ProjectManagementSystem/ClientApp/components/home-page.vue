@@ -1,40 +1,103 @@
 <template>
-    <div>
-        <h1>Hello, world!</h1>
-        <p>Welcome to your new single-page application, built with: </p>
-        <ul>
-            <li><a href="https://get.asp.net/"><icon :icon="['fab', 'microsoft']"/> ASP.NET Core</a> and <a href="https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx">C#</a>                    for cross-platform server-side code</li>
-            <li><a href="https://vuejs.org/"><icon :icon="['fab', 'vuejs']"/> Vue.js</a> for client-side code</li>
-            <li><a href="https://webpack.js.org/">Webpack</a> for building and bundling client-side resources</li>
-            <li><a href="http://getbootstrap.com/">Bootstrap</a> for layout and styling</li>
-            <li><a href="http://jquery.com/">JQuery</a> for Bootstrap components</li>
-            <li><a href="https://fontawesome.com"><icon :icon="['fab', 'font-awesome']"/> Font Awesome</a> (Free) for the icons</li>
-            <li><a href="api/SampleData/WeatherForecasts">API sample data</a> from the dotnet controller</li>
-        </ul>
-        <p>To help you get started, we've also set up:</p>
-        <ul>
-            <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return
-                here.</li>
-            <li><strong>Webpack dev middleware</strong>. In development mode, there's no need to run the <code>webpack</code>                    build tool. Your client-side resources are dynamically built on demand. Updates are available as soon
-                as you modify any file.</li>
-            <li><strong>Hot module replacement</strong>. In development mode, you don't even need to reload the page after
-                making most changes. Within seconds of saving changes to files, your Vue.js app will be rebuilt and
-                a new instance injected is into the page.</li>
-            <li><strong>Code splitting and lazy loading</strong>. Vue.js components may optionally be bundled individually and
-                loaded on demand. For example, the code and template for 'Counter' is not loaded until you navigate to
-                it..</li>
-            <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled,
-                and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>
-        </ul>
+    <div class="page-wrapper">
+        <div class="content container-fluid">
+            <!-- Page Header -->
+            <div class="crms-title row bg-white mb-4">
+                <div class="col">
+                    <h3 class="page-title">
+                    <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                        <i class="la la-table"></i>
+                    </span> <span>Project Dashboard</span></h3>
+                </div>
+                <div class="col text-right">
+                    <ul class="breadcrumb bg-white float-right m-0 pl-0 pr-0">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Project Dashboard</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- /Page Header -->
 
-        <br><br>
+            <div class="row graphs">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Sales Overview</h3>
+                            <div id="line-charts"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Completed Tasks</h3>
+                            <canvas id="mixed-chart" width="800" height="450"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row graphs">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Sales Statistics</h3>
+                            <canvas id="bar-chart-grouped" width="800" height="450"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Total Revenue</h3>
+                            <div id="bar-charts"></div>
+                        </div>
+                    </div>
+                </div>
 
-        <h2>This Template brought to you by <a href="http://DevHelp.Online">DevHelp.Online</a></h2>
-        <strong>Consulting | Development | Training | Workshops</strong><br>
-        <p>Get your Team or Application up to speed by working with some of the leading industry experts in JavaScript & ASP.NET!</p>
-
-        <strong>Contact us today: </strong>
-        <p><a href="mailto:hello@devhelp.online"><icon icon="envelope"/> Hello@DevHelp.Online</a></p>
+                
+            </div>
+            
+            <div class="row graphs">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Yearly Projects</h3>
+                            <canvas id="bar-chart" width="800" height="550"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Number of Employees</h3>
+                            <canvas id="bar-chart-horizontal" width="800" height="450"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row graphs">
+                <div class="col-md-6 mb-0"> 
+                    <div class="card h-100">
+                        <div class="card-body">
+                        <h3 class="card-title">Total Lead</h3>
+                            <canvas id="pie-chart" width="800" height="450"></canvas>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6 mb-0">
+                    
+                    <div class="card h-100 mb-0">
+                        <div class="card-body">
+                            <h3 class="card-title">Total Sales</h3>
+                            <div id="chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>			
     </div>
 </template>
 
