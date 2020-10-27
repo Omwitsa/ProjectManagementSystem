@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "26bca02e7d3c0f0198c0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d6c9f544510a4a1754ca"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -23309,7 +23309,13 @@ var staticRenderFns = [
                 _c("h3", { staticClass: "card-title" }, [_vm._v("Total Lead")]),
                 _vm._v(" "),
                 _c("canvas", {
-                  attrs: { id: "pie-chart", width: "800", height: "450" }
+                  staticClass: "chartjs-render-monitor",
+                  staticStyle: {
+                    display: "block",
+                    width: "479px",
+                    height: "269px"
+                  },
+                  attrs: { id: "pie-chart", width: "479", height: "269" }
                 })
               ])
             ])

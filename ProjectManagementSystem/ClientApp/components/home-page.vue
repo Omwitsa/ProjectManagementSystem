@@ -82,10 +82,10 @@
                     <div class="card h-100">
                         <div class="card-body">
                         <h3 class="card-title">Total Lead</h3>
-                            <canvas id="pie-chart" width="800" height="450"></canvas>
+                        <canvas id="pie-chart" width="479" height="269" class="chartjs-render-monitor" style="display: block; width: 479px; height: 269px;"></canvas>
+                            <!-- <canvas id="pie-chart" width="800" height="450"></canvas> -->
                         </div>
                     </div>
-                    
                 </div>
                 <div class="col-md-6 mb-0">
                     
